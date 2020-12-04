@@ -27,8 +27,8 @@ public class Voter {
             }
             index++;
         }
-        char[] buffer = new char[this.aadharNo.length()+1];
-        (this.aadharNo+"\n").getChars(0, this.aadharNo.length(), buffer, 0);
+        char[] buffer = new char[this.aadharNo.length()];
+        (this.aadharNo).getChars(0, this.aadharNo.length(), buffer, 0);
         for (char chars : buffer) {
             Main.listOfAlreadyVoted.write(chars);
         }

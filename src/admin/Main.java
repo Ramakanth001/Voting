@@ -19,11 +19,10 @@ public class Main {
     public static FileWriter listOfAlreadyVoted;
 
     public static void main(String[] args) throws Exception {
-
         int option = 9999;
         displayOptions();
         while (option != 0) {
-            System.out.println("Enter an option : ");
+            System.out.print("Enter an option : ");
             option = Integer.parseInt(reader.readLine());
             switch (option) {
                 case 0:
@@ -128,7 +127,6 @@ public class Main {
     }
 
     static void endOfElections() throws Exception {
-        listOfAlreadyVoted.close();
         System.out.println("Successfully Elections completed");
     }
 
@@ -142,6 +140,7 @@ public class Main {
         if (!isVoted(myAadharNo) && index != -1) {
             System.out.println("Enter name of the contender whom you want to vote : ");
             ManagingVoters.voterList.get(index).castMyVote(reader.readLine());
+            System.out.println("Thanks for voting\nYour valuable vote has been recorded");
         }
     }
 

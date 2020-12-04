@@ -7,6 +7,6 @@ public class AlreadyVoted extends Exception{
 
     @Override
     public String toString() {
-        return "Your vote has been recorded!";
+        return "Your vote has been recorded already!";
     }
 }
