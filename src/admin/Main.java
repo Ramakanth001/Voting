@@ -133,11 +133,12 @@ public class Main {
     }
 
     static void iWillVote() throws IOException {
-        System.out.println("Enter name, aadhar Number : ");
+        System.out.print("Enter name : ");
         String myName = reader.readLine();
+        System.out.print("aadhar Number : ");
         String myAadharNo = reader.readLine();
         int index = isValidVoter(myName, myAadharNo);
-        System.out.println("index is : " + index);
+        //System.out.println("index is : " + index);
         if (!isVoted(myAadharNo) && index != -1) {
             System.out.println("Enter name of the contender whom you want to vote : ");
             ManagingVoters.voterList.get(index).castMyVote(reader.readLine());

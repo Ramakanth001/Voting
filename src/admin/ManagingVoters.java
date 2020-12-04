@@ -46,8 +46,9 @@ public class ManagingVoters {
         }
     }
     public static void listOfVoters() {
+        System.out.println("Voters       Aaddhar Number");
         for(Voter v:voterList){
-            System.out.println(v.name+v.aadharNo);
+            System.out.println(v.name+" - "+v.aadharNo);
         }
     }
 }
