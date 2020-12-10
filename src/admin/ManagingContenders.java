@@ -46,6 +46,7 @@ public class ManagingContenders {
                     contenderList.remove(contenderList.get(index));
                     return;
                 }
+                index++;
             }
             throw new InvalidContednerName();
         }catch(Exception e){
