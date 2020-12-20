@@ -65,7 +65,7 @@ public class Main {
                         System.out.println("Wait until nominations and registrations over");
                     break;
                 case 6:
-                    if (isNominationsDone&&isRegistrationsDone)
+                    if (isNominationsDone)
                         ManagingContenders.displayContenders();
                     else
                         System.out.println("Still nominations are going on\n" +
@@ -127,6 +127,7 @@ public class Main {
     }
 
     static void endOfElections() throws Exception {
+        doneVoting.delete();
         System.out.println("Successfully Elections completed");
     }
 
